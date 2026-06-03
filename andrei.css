@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body{
+    background: url(wa1\ \(10\).jpeg);
+    background-repeat: no-repeat;
+    background-size: cover
+    
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+h1{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: #FFB3C6;
+    -webkit-text-stroke: 1px #B191E5;
+    font-style: italic;
+    font-size: 80px;
+    animation: fadeIn 0.3s ease-in forwards;
+    margin-top: 10px;
+
+}
+
+.container{
+    animation: fadeIn 0.3s ease-in forwards;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+.card{
+  font-family: 'Fredoka', sans-serif;
+  border: solid 10px #CDB4F2;
+  transition: transform 0.3s ease;
+}
+
+.card:hover{
+  transform: perspective(500px)
+            rotateY(10deg);
+}

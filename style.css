@@ -1,0 +1,186 @@
+@keyframes fall{
+    0%{
+        top: -50px;
+        opacity: 1;
+    }
+    100%{
+        top: 800px;
+        opacity: 0;
+        transform: rotate(90deg);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+    background-image: url(../img/pngtree-sweet-cute-pink-background-picture-image_1275652.jpg);
+    background-size: cover;
+    
+}
+
+.container{
+    width: 90%;
+    max-width: 800px;
+    height: 620px;
+    background-color: #F6F6F6;
+    border: solid 10px #FEC5F6;
+    border-radius: 20px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3); /* semi-transparent */
+    backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+    z-index: 999;
+    
+
+}
+.image{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image img{
+    width: 300px;
+    height: 465px;
+    border-radius: 10px;
+    border: solid 2px #B33791;
+ 
+}
+
+.inputs img{
+    position: absolute;
+    top: 89px;   /* relative to .inputs container */
+    left: 100px;  /* adjust within .inputs only */
+    width: 20px;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    gap: 10px;
+    z-index: 999;
+    position: relative;
+
+ 
+}
+
+.wrongPass{
+    position: absolute;
+    top: 50px;
+    left:99px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: red;
+
+}
+
+.inputs input{
+    height: 35px;
+    width: 200px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background: #FEC5F6;
+    margin-bottom: 10px;
+    text-align: center;
+  
+}
+
+.buttons-design{
+    display: grid;
+    grid-template-columns: 50px 50px 50px;
+    gap: 20px;
+}
+
+.buttons-design button{
+    height: 50px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+    background: #FEC5F6;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+
+
+}
+
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    transform: rotate(45deg);
+    animation: fall 2.5s linear infinite;
+   
+
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+}
+
+/* Position the circles to form the top of the heart */
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -10px;
+}
+
+@media (max-width:480px){
+    .container{
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin-top: 50px;
+        padding-top: 10px;
+    }
+
+    .inputs{
+        margin-top: 20px;
+    }
+
+    .buttons-design{
+        margin-bottom: 10px;
+        gap: 30px;
+    }
+
+    .inputs img{
+        left: 0;
+        top: 8px;
+
+        }
+
+
+}
+

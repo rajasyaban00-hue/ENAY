@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body{
+    background-image: url(wa1\ \(11\).jpeg);
+     width: 98vw;
+    height: 80vh;
+    object-fit: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+}
+
+h1{
+    font-family: 'Caveat', cursive;
+    text-align: center;
+    font-size: 80px;
+    color: #ffffff;
+}
+
+.content{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 700px;
+
+    backdrop-filter: blur(10px);   /* main blur */
+    -webkit-backdrop-filter: blur(10px); /* for Safari */
+    background-color: rgba(255, 255, 255, 0.2); 
+
+    border: solid 10px #FFB3C6;
+    border-radius: 10px;
+}
+
+#time-spent{
+    font-family: 'Fredoka', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        background-size:25rem;
+       
+        background-position: center 120%;
+    }
+}
